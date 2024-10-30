@@ -1,0 +1,133 @@
+<html>
+<body>
+    <div class="login">
+       <h1>Loan Approval Prediction</h1>
+
+       <form action="{{ url_for('predict_datapoint')}}" method="post">
+        <div class="mb-3">
+            <label class="form-label">Person Age</label>
+            <input class="form-control" type="number" name="person_age"
+                placeholder="Enter your Age" min='0' required/>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Person Income</label>
+            <input class="form-control" type="number" name="person_income"
+                placeholder="Enter your Income" min='0' required/>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Home Ownership</label>
+            <select class="form-control" name="person_home_ownership" placeholder="Enter you Home Ownership status" required>
+                <option class="placeholder" selected disabled value="">Select your Home Ownership status</option>
+                <option value="RENT">
+                    Rent
+                </option>
+                <option value="OWN">
+                    Own
+                </option>
+                <option value="MORTGAGE">
+                    Mortgage
+                </option>
+                <option value="OTHER">
+                    Other
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Employment Length</label>
+            <input class="form-control" type="number" name="person_emp_length"
+                placeholder="Enter your Length of Employment" min='0' required/>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Loan Intent</label>
+            <select class="form-control" name="loan_intent" placeholder="Enter your Intention for loan" required>
+                <option class="placeholder" selected disabled value="">Select Loan Intent</option>
+                <option value="EDUCATION">
+                    Education
+                </option>
+                <option value="MEDICAL">
+                    Medical
+                </option>
+                <option value="PERSONAL">
+                    Personal
+                </option>
+                <option value="VENTURE">
+                    Venture
+                </option>
+                <option value="DEBTCONSOLIDATION">
+                    Debt Consolidation
+                </option>
+                <option value="HOMEIMPROVEMENT">
+                    Home Improvement
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Loan Grade</label>
+            <select class="form-control" name="loan_grade"
+                placeholder="Enter your Loan Grade" required>
+                <option class="placeholder" selected disabled value="">Select Loan Grade</option>
+                <option value="A">
+                    A
+                </option>
+                <option value="B">
+                    B
+                </option>
+                <option value="C">
+                    C
+                </option>
+                <option value="D">
+                    D
+                </option>
+                <option value="E">
+                    E
+                </option>
+                <option value="F">
+                    F
+                </option>
+                <option value="G">
+                    G
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Loan Amount</label>
+            <input class="form-control" type="number" name="loan_amnt"
+                placeholder="Enter Loan Amount" min='0' required/>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Loan Interest Rate</label>
+            <input class="form-control" type="number" name="loan_int_rate"
+                placeholder="Enter Interest Rate" min='0' step="0.01" required/>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Loan Percent Income</label>
+            <input class="form-control" type="number" name="loan_percent_income"
+                placeholder="Enter Loan Percent of Income" min='0' step="0.01" required/>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Default in file</label>
+            <select class="form-control" name="cb_person_default_on_file" placeholder="Enter Default" required>
+                <option class="placeholder" selected disabled value="">Select Default status</option>
+                <option value="Y">
+                    Yes
+                </option>
+                <option value="N">
+                    No
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Credit History Length</label>
+            <input class="form-control" type="number" name="cb_person_cred_hist_length"
+                placeholder="Enter your Credit History Length" min='0' required/>
+        </div>
+        <div class="mb-3">
+            <input class="btn btn-primary" type="submit" value="Predict your Loan Status" required />
+        </div>
+        </form>
+    <h2>
+       Your Loan status is {{results}}
+    </h2>
+    </div>
+</body>
+</html>
