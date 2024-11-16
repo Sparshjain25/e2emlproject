@@ -1,53 +1,29 @@
-# Gemstone Price Prediction - Utkarsh Gaikwad
+# Loan Approval Prediction - Sparsh Jain
 
 ### Introduction About the Data :
 
-**The dataset** The goal is to predict `price` of given diamond (Regression Analysis).
+**The dataset** The objective is to develop a classification model to predict whether a loan application, based on provided attributes, will be approved or denied.
 
 There are 10 independent variables (including `id`):
 
-* `id` : unique identifier of each diamond
-* `carat` : Carat (ct.) refers to the unique unit of weight measurement used exclusively to weigh gemstones and diamonds.
-* `cut` : Quality of Diamond Cut
-* `color` : Color of Diamond
-* `clarity` : Diamond clarity is a measure of the purity and rarity of the stone, graded by the visibility of these characteristics under 10-power magnification.
-* `depth` : The depth of diamond is its height (in millimeters) measured from the culet (bottom tip) to the table (flat, top surface)
-* `table` : A diamond's table is the facet which can be seen when the stone is viewed face up.
-* `x` : Diamond X dimension
-* `y` : Diamond Y dimension
-* `x` : Diamond Z dimension
+* `id` : unique identifier of each entry
+* `person_age` : Age of person
+* `person_income` : Income of a person
+* `person_home_ownership` : Status of home ownership i.e. "RENT", "OWN", "MORTGAGE" and "OTHER"
+* `person_emp_length` : Employment length in years
+* `loan_intent` : Purpose for taking loan
+* `loan_grade` : Loan Grade
+* `loan_amount` : Amount of the loan
+* `loan_int_rate` : Interest rate for the loan
+* `loan_percent_income` : The percent of the loan to income in percentage(%)
+* `cb_person_default_on_file` : The presence of historical default (Y or N)
+* `cb_person_cred_hist_length` : Credit history length
 
 Target variable:
-* `price`: Price of the given Diamond.
+* `loan_status`: Loan status (0 is no; 1 is yes)
 
 Dataset Source Link :
-[https://www.kaggle.com/competitions/playground-series-s3e8/data?select=train.csv](https://www.kaggle.com/competitions/playground-series-s3e8/data?select=train.csv)
-
-### It is observed that the categorical variables 'cut', 'color' and 'clarity' are ordinal in nature
-
-### Check this link for details : [American Gem Society](https://www.americangemsociety.org/ags-diamond-grading-system/)
-
-# AWS Deployment Link :
-
-AWS Elastic Beanstalk link : [http://gemstonepriceutkarshgaikwad-env.eba-7zp3wapg.ap-south-1.elasticbeanstalk.com/](http://gemstonepriceutkarshgaikwad-env.eba-7zp3wapg.ap-south-1.elasticbeanstalk.com/)
-
-# Screenshot of UI
-
-![HomepageUI](./Screenshots/HomepageUI.jpg)
-
-# YouTube Video Link
-
-Link for YouTube Video : Click the below thumbnail to open 
-
-[![https://youtu.be/Xvk5r0t_RQw](https://i.ytimg.com/vi/Xvk5r0t_RQw/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBbp5SouquUm3Y3t-NYfOYsg4N4oQ)](https://youtu.be/Xvk5r0t_RQw)
-
-# AWS API Link
-
-API Link : [http://gemstonepriceutkarshgaikwad-env.eba-7zp3wapg.ap-south-1.elasticbeanstalk.com/predictAPI](http://gemstonepriceutkarshgaikwad-env.eba-7zp3wapg.ap-south-1.elasticbeanstalk.com/predictAPI)
-
-# Postman Testing of API :
-
-![API Prediction](./Screenshots/APIPrediction.jpg)
+https://www.kaggle.com/datasets/chilledwanker/loan-approval-prediction
 
 # Approach for the project 
 
