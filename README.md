@@ -56,3 +56,9 @@ https://www.kaggle.com/datasets/chilledwanker/loan-approval-prediction
     * **Web Application**: A Flask web application is created to allow users to interact with the model via a simple user interface (UI). The UI prompts users to input loan application details (e.g., income, loan amount, credit score, etc.).
     * **Prediction Interaction**: When a user submits their information, the web app calls the prediction pipeline to process the data, runs the trained model, and displays the predicted loan approval status on the web page.
     * **Deployment**: The Flask app is deployed, making it accessible to users via a web browser, allowing them to easily check the loan approval status in real time.
+  
+6. Deployment and Continuous Deployment (CD):
+   * **Deployment to AWS Beanstalk**: The Flask application, along with the prediction pipeline, has been deployed to AWS Elastic Beanstalk. This ensures a scalable and reliable hosting environment for the web application.
+   * **Continuous Deployment with CodePipeline**:
+     * **Automated Deployment**: AWS CodePipeline is used to automate the deployment process. It is configured to automatically sync the latest changes from the GitHub repository to AWS Elastic Beanstalk.
+     * **Seamless Updates**: Any new commits pushed to the GitHub repository trigger an automatic deployment to AWS Beanstalk, ensuring the web application is always up-to-date without requiring manual intervention.
