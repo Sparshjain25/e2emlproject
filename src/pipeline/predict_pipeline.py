@@ -10,17 +10,17 @@ class PredictPipeline:
     def predict(self,features):
         try:
             model_path = os.path.join(os.getcwd(), "artifacts", "model.pkl")
-            print("model_path#######++++++===== ",model_path)
+            # print("model_path#######++++++===== ",model_path)
             preprocessor_path="artifacts\preprocessor.pkl"
             model=load_object(file_path=model_path)
             preprocessor=load_object(file_path=preprocessor_path)
-            print("FEATURE________________________________________________\n",features)
+            # print("FEATURE________________________________________________\n",features)
             data_scaled=preprocessor.transform(features)
             preds=model.predict(data_scaled)
             if preds[0]:
                 return "Approved!"
             else:
-                return "Rejecteed!!"
+                return "Rejected!!"
         except Exception as e:
             raise CustomException(e,sys)
 

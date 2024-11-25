@@ -34,14 +34,14 @@ def predict_datapoint():
             cb_person_cred_hist_length=request.form.get('cb_person_cred_hist_length')
         )
         pred_df=data.get_data_as_dataframe()
-        print(pred_df)
+
 
         predict_pipeline=PredictPipeline()
         results=predict_pipeline.predict(pred_df)
         return render_template('home.html',results=results)
     
 if __name__=="__main__":
-    app.run(host="0.0.0.0")  #  debug=True) if not deployed
+    app.run(host="0.0.0.0", port=8080)  #  debug=True) if not deployed
 
 
 
