@@ -10,9 +10,10 @@ class PredictPipeline:
     def predict(self,features):
         try:
             model_path = os.path.join(os.getcwd(), "artifacts", "model.pkl")
-            # print("model_path#######++++++===== ",model_path)
-            preprocessor_path="artifacts\preprocessor.pkl"
+            print("model_path ",model_path)
+            preprocessor_path=os.path.join(os.getcwd(), "artifacts", "preprocessor.pkl")
             model=load_object(file_path=model_path)
+            print(" pp ", preprocessor_path)
             preprocessor=load_object(file_path=preprocessor_path)
             # print("FEATURE________________________________________________\n",features)
             data_scaled=preprocessor.transform(features)
