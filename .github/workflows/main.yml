@@ -89,7 +89,7 @@ jobs:
          
       # - name: Stop and remove  container if running
       #   run: |
-      #    docker ps -q --filter "name=mltest" | grep -q . && docker stop mltest && docker rm -fv mltest
+      #    docker ps -q --filter "name=loanprediction" | grep -q . && docker stop loanprediction && docker rm -fv loanprediction
        
       - name: Run Docker Image to serve users
         run: |
